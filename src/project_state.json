@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Legal awareness app \"Know Your Law\" (KYL) focused on mediation education, legislative summaries, and mediation scenario walkthroughs.",
   "architectural_notes": [
-    "Content organized into three top-level sections with nested sub-sections/sub-sub-sections; legislative pages include a \"Key Features\" list; scenarios include narrative + recommended mediation steps."
+    "Content organized into three top-level sections with nested sub-sections/sub-sub-sections; legislative pages include a \"Key Features\" list; scenarios include narrative + recommended mediation steps.",
+    "KYL is deployed as a PWA; include an in-app “Install App” button that triggers the browser’s PWA install prompt when available."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Minimal KYL wordmark logo with balanced typography (kyl-logo.dim_512x512.png)\n- Simple legal-education themed banner illustration featuring mediation/handshake motif in a clean, modern style (kyl-hero.dim_1600x600.png)",
   "existing_features": [
     {
       "id": "feature-create-the-app-s-core-information-architecture-and-navigation-for-a-legal-awareness-app-titled-know-your-law-kyl-with-three-top-level-sections-1-about-mediation-2-legislative-knowledge-3-scenarios-where-mediation-will-take-place-the-ui-must-allow-users-to-easily-navigate-between-top-level-sections-and-their-sub-sections-e-g-via-sidebar-tabs-or-accordion-and-must-be-usable-on-mobile-and-desktop",
@@ -56,6 +56,22 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-an-in-app-install-app-button-to-the-kyl-ui-that-prompts-users-to-install-the-progressive-web-app-when-installation-is-available",
+      "title": "Add an in-app “Install App” button to the KYL UI that prompts users to install the Progressive Web App when installation is available.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-client-side-installability-detection-and-prompting-logic-for-the-pwa-and-wire-it-to-the-install-app-button",
+      "title": "Implement client-side installability detection and prompting logic for the PWA, and wire it to the “Install App” button.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -86,6 +102,12 @@
     {
       "id": "AR-5",
       "summary": "Create section \"Scenarios where mediation will take place\" with 5 fictional dispute scenarios and mediation-based resolution guidance",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add an in-app “Install App” button to prompt PWA installation for KYL",
       "reqIds": [],
       "status": "pending"
     }

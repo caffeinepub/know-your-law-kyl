@@ -4,6 +4,7 @@ import { TopOverview } from './components/kyl/TopOverview';
 import { AboutMediationSection } from './sections/AboutMediationSection';
 import { LegislativeKnowledgeSection } from './sections/LegislativeKnowledgeSection';
 import { ScenariosSection } from './sections/ScenariosSection';
+import { Toaster } from '@/components/ui/sonner';
 
 export type SectionId = 'overview' | 'about-mediation' | 'legislative-knowledge' | 'scenarios';
 
@@ -26,9 +27,12 @@ function App() {
   };
 
   return (
-    <AppShell activeSection={activeSection} onNavigate={setActiveSection}>
-      {renderSection()}
-    </AppShell>
+    <>
+      <AppShell activeSection={activeSection} onNavigate={setActiveSection}>
+        {renderSection()}
+      </AppShell>
+      <Toaster />
+    </>
   );
 }
 

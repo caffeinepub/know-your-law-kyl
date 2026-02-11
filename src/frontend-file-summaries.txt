@@ -1,0 +1,6 @@
+{
+  "frontend/src/hooks/usePwaInstall.ts": "Custom React hook that manages PWA installation state by listening to beforeinstallprompt and appinstalled events, detecting standalone mode, and providing a function to trigger the native install prompt.",
+  "frontend/src/components/kyl/InstallAppButton.tsx": "Button component that triggers PWA installation when available, hides itself when app is already installed, and shows helpful instructions via toast when installation prompt is not supported by the browser.",
+  "frontend/src/components/kyl/AppShell.tsx": "Main layout shell component with header (including logo, title, and Install App button), responsive navigation sidebar, main content area, and footer with attribution.",
+  "frontend/src/App.tsx": "Root application component that manages section navigation state and renders the appropriate content section within AppShell, now includes Toaster component for notifications."
+}

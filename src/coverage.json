@@ -1,214 +1,53 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T20:23:08.112Z",
+  "generatedAt": "2026-02-11T20:41:09.745Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 6,
-    "implemented": 6,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Create the app’s core information architecture and navigation for a legal awareness app titled “Know Your Law (KYL)”, with three top-level sections: (1) About Mediation, (2) Legislative Knowledge, (3) Scenarios where mediation will take place. The UI must allow users to easily navigate between top-level sections and their sub-sections (e.g., via sidebar, tabs, or accordion), and must be usable on mobile and desktop.",
+        "id": "REQ-7",
+        "summary": "Add an in-app “Install App” button to the KYL UI that prompts users to install the Progressive Web App when installation is available.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/kyl/AppShell.tsx",
-          "frontend/src/components/kyl/nav.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/App.tsx",
-          "frontend/src/components/kyl/AppShell.tsx",
-          "frontend/src/components/kyl/nav.ts"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Implement the “About Mediation” section with four sub-sections and English educational content for each: (1) Importance & Benefits of Mediation, (2) Suitability of Mediation for different types of disputes, (3) Role of Mediator, (4) Mediation Process. Content must be structured with headings and bullet points for readability.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/sections/AboutMediationSection.tsx",
-          "frontend/src/components/kyl/ContentBlock.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/sections/AboutMediationSection.tsx",
-          "frontend/src/components/kyl/ContentBlock.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Implement the “Legislative Knowledge” section with three sub-sections: (1) Mediation Act, 2023, (2) Code of Civil Procedure, 1908, (3) Arbitration and Conciliation Act, 1996. For each sub-section, display a “Key Features” list. The “Mediation Act, 2023” key features must include the exact points provided by the user (pre-litigation mediation, MSA enforceability, Mediation Council of India, confidentiality & 180-day time-bound process, online mediation, applicability). Also author similar “Key Features” lists for the Code of Civil Procedure, 1908 and the Arbitration and Conciliation Act, 1996 in clear, plain English (no placeholders).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/sections/LegislativeKnowledgeSection.tsx",
-          "frontend/src/components/kyl/KeyFeaturesCard.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/sections/LegislativeKnowledgeSection.tsx",
-          "frontend/src/components/kyl/KeyFeaturesCard.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Implement the “Scenarios where mediation will take place” section with exactly 5 sub-sections. Each sub-section must include: (a) a fictional dispute scenario between two parties (clearly naming the parties), and (b) a step-by-step mediation-based resolution approach explaining how the dispute could be resolved through mediation (ground rules, mediator role, identifying interests, options, settlement terms). Content must be in English and clearly separated into “Scenario” and “How mediation resolves it” blocks.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/sections/ScenariosSection.tsx",
-          "frontend/src/components/kyl/ScenarioCard.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/sections/ScenariosSection.tsx",
-          "frontend/src/components/kyl/ScenarioCard.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Apply a cohesive, creative visual theme for the KYL app (colors, typography, spacing, and components) appropriate for a legal awareness/education product. Avoid using a blue-and-purple theme. Ensure consistent styling across navigation, section pages, and content blocks (cards, accordions, callouts, lists).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
+          "frontend/src/components/kyl/InstallAppButton.tsx",
           "frontend/src/components/kyl/AppShell.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
+          "frontend/src/components/kyl/InstallAppButton.tsx",
           "frontend/src/components/kyl/AppShell.tsx"
         ]
       },
       {
-        "id": "REQ-6",
-        "summary": "Add required static images to the app by generating the assets into frontend/public/assets/generated and rendering them in the UI: a KYL logo and a simple hero/banner illustration consistent with the chosen theme.",
+        "id": "REQ-8",
+        "summary": "Implement client-side installability detection and prompting logic for the PWA, and wire it to the “Install App” button.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/kyl-logo.dim_512x512.png",
-          "frontend/public/assets/generated/kyl-hero.dim_1600x600.png",
-          "frontend/src/components/kyl/AppShell.tsx",
-          "frontend/src/components/kyl/TopOverview.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/hooks/usePwaInstall.ts",
+          "frontend/src/components/kyl/InstallAppButton.tsx"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/kyl-logo.dim_512x512.png",
-          "frontend/public/assets/generated/kyl-hero.dim_1600x600.png",
-          "frontend/src/components/kyl/AppShell.tsx",
-          "frontend/src/components/kyl/TopOverview.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/hooks/usePwaInstall.ts",
+          "frontend/src/components/kyl/InstallAppButton.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
     "build-request.json",
-    "build-template/Dockerfile",
-    "build-template/LICENSE",
     "build-template/README.md",
-    "build-template/deploy.sh",
-    "build-template/icp.yaml",
-    "build-template/package.json",
-    "build-template/pnpm-lock.yaml",
-    "build-template/pnpm-workspace.yaml",
-    "build-template/scripts/prune-unused-images.js",
-    "build-template/scripts/resize-images.js",
-    "build-template/src/backend/canister.yaml",
-    "build-template/src/backend/system-idl/aaaaa-aa.did",
-    "build-template/src/frontend/canister.yaml",
-    "build-template/src/frontend/components.json",
-    "build-template/src/frontend/env.json",
-    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
-    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
-    "build-template/src/frontend/eslint.config.js",
-    "build-template/src/frontend/package.json",
-    "build-template/src/frontend/postcss.config.js",
-    "build-template/src/frontend/src/components/ui/accordion.tsx",
-    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
-    "build-template/src/frontend/src/components/ui/alert.tsx",
-    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
-    "build-template/src/frontend/src/components/ui/avatar.tsx",
-    "build-template/src/frontend/src/components/ui/badge.tsx",
-    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
-    "build-template/src/frontend/src/components/ui/button.tsx",
-    "build-template/src/frontend/src/components/ui/calendar.tsx",
-    "build-template/src/frontend/src/components/ui/card.tsx",
-    "build-template/src/frontend/src/components/ui/carousel.tsx",
-    "build-template/src/frontend/src/components/ui/chart.tsx",
-    "build-template/src/frontend/src/components/ui/checkbox.tsx",
-    "build-template/src/frontend/src/components/ui/collapsible.tsx",
-    "build-template/src/frontend/src/components/ui/command.tsx",
-    "build-template/src/frontend/src/components/ui/context-menu.tsx",
-    "build-template/src/frontend/src/components/ui/dialog.tsx",
-    "build-template/src/frontend/src/components/ui/drawer.tsx",
-    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
-    "build-template/src/frontend/src/components/ui/form.tsx",
-    "build-template/src/frontend/src/components/ui/hover-card.tsx",
-    "build-template/src/frontend/src/components/ui/input-otp.tsx",
-    "build-template/src/frontend/src/components/ui/input.tsx",
-    "build-template/src/frontend/src/components/ui/label.tsx",
-    "build-template/src/frontend/src/components/ui/menubar.tsx",
-    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
-    "build-template/src/frontend/src/components/ui/pagination.tsx",
-    "build-template/src/frontend/src/components/ui/popover.tsx",
-    "build-template/src/frontend/src/components/ui/progress.tsx",
-    "build-template/src/frontend/src/components/ui/radio-group.tsx",
-    "build-template/src/frontend/src/components/ui/resizable.tsx",
-    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
-    "build-template/src/frontend/src/components/ui/select.tsx",
-    "build-template/src/frontend/src/components/ui/separator.tsx",
-    "build-template/src/frontend/src/components/ui/sheet.tsx",
-    "build-template/src/frontend/src/components/ui/sidebar.tsx",
-    "build-template/src/frontend/src/components/ui/skeleton.tsx",
-    "build-template/src/frontend/src/components/ui/slider.tsx",
-    "build-template/src/frontend/src/components/ui/sonner.tsx",
-    "build-template/src/frontend/src/components/ui/switch.tsx",
-    "build-template/src/frontend/src/components/ui/table.tsx",
-    "build-template/src/frontend/src/components/ui/tabs.tsx",
-    "build-template/src/frontend/src/components/ui/textarea.tsx",
-    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
-    "build-template/src/frontend/src/components/ui/toggle.tsx",
-    "build-template/src/frontend/src/components/ui/tooltip.tsx",
-    "build-template/src/frontend/src/hooks/use-mobile.tsx",
-    "build-template/src/frontend/src/lib/utils.ts",
-    "build-template/src/frontend/tsconfig.json",
-    "build-template/src/frontend/vite.config.js",
-    "build-template/tsconfig.json",
-    "caffeine.lock.json",
     "feature_evidence.json",
+    "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.css",
-    "frontend/index.html",
-    "frontend/public/assets/generated/kyl-hero.dim_1600x600.png",
-    "frontend/public/assets/generated/kyl-logo.dim_512x512.png",
     "frontend/src/App.tsx",
-    "frontend/src/backend.d.ts",
-    "frontend/src/backend.ts",
     "frontend/src/components/kyl/AppShell.tsx",
-    "frontend/src/components/kyl/ContentBlock.tsx",
-    "frontend/src/components/kyl/KeyFeaturesCard.tsx",
-    "frontend/src/components/kyl/ScenarioCard.tsx",
-    "frontend/src/components/kyl/TopOverview.tsx",
-    "frontend/src/components/kyl/nav.ts",
-    "frontend/src/config.ts",
-    "frontend/src/declarations/backend.did.d.ts",
-    "frontend/src/declarations/backend.did.js",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/src/sections/AboutMediationSection.tsx",
-    "frontend/src/sections/LegislativeKnowledgeSection.tsx",
-    "frontend/src/sections/ScenariosSection.tsx",
-    "frontend/src/ui-summary.json",
-    "frontend/src/utils/StorageClient.ts",
-    "frontend/tailwind.config.js",
+    "frontend/src/components/kyl/InstallAppButton.tsx",
+    "frontend/src/hooks/usePwaInstall.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import { navigationSections } from './nav';
+import { InstallAppButton } from './InstallAppButton';
 import type { SectionId } from '../../App';
 
 interface AppShellProps {
@@ -53,25 +54,30 @@ export function AppShell({ children, activeSection, onNavigate }: AppShellProps)
             </div>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-72">
-              <SheetHeader>
-                <SheetTitle className="flex items-center gap-2">
-                  <Scale className="h-5 w-5" />
-                  Navigation
-                </SheetTitle>
-              </SheetHeader>
-              <div className="mt-6">
-                <NavLinks onItemClick={() => {}} />
-              </div>
-            </SheetContent>
-          </Sheet>
+          <div className="flex items-center gap-2">
+            {/* Install App Button */}
+            <InstallAppButton />
+
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild className="lg:hidden">
+                <Button variant="outline" size="icon">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-72">
+                <SheetHeader>
+                  <SheetTitle className="flex items-center gap-2">
+                    <Scale className="h-5 w-5" />
+                    Navigation
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="mt-6">
+                  <NavLinks onItemClick={() => {}} />
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </header>
 
