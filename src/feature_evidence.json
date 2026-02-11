@@ -2,11 +2,13 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-an-in-app-install-app-button-to-the-kyl-ui-that-prompts-users-to-install-the-progressive-web-app-when-installation-is-available",
-      "featureTitle": "Add an in-app “Install App” button to the KYL UI that prompts users to install the Progressive Web App when installation is available.",
+      "featureId": "feature-remove-the-play-store-guide-section-from-the-app-ui-so-users-can-no-longer-navigate-to-or-view-any-google-play-store-publishing-checklist-content",
+      "featureTitle": "Remove the \"Play Store Guide\" section from the app UI so users can no longer navigate to or view any Google Play Store publishing checklist content.",
       "files": [
-        "frontend/src/components/kyl/AppShell.tsx",
-        "frontend/src/components/kyl/InstallAppButton.tsx"
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/TopOverview.tsx",
+        "frontend/src/components/kyl/nav.ts",
+        "frontend/src/sections/PlayStoreChecklistSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,26 +18,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-client-side-installability-detection-and-prompting-logic-for-the-pwa-and-wire-it-to-the-install-app-button",
-      "featureTitle": "Implement client-side installability detection and prompting logic for the PWA, and wire it to the “Install App” button.",
-      "files": [
-        "frontend/src/components/kyl/InstallAppButton.tsx",
-        "frontend/src/hooks/usePwaInstall.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
+        "REQ-11"
       ],
       "confidence": "high"
     }

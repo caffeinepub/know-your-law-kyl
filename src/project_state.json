@@ -1,10 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 9,
   "summary": "Legal awareness app \"Know Your Law\" (KYL) focused on mediation education, legislative summaries, and mediation scenario walkthroughs.",
   "architectural_notes": [
     "Content organized into three top-level sections with nested sub-sections/sub-sub-sections; legislative pages include a \"Key Features\" list; scenarios include narrative + recommended mediation steps.",
-    "KYL is deployed as a PWA; include an in-app “Install App” button that triggers the browser’s PWA install prompt when available."
+    "KYL is deployed as a PWA; include an in-app “Install App” button that triggers the browser’s PWA install prompt when available.",
+    "Logo branding request: generate an aesthetic \"KYL\" logo using a black + peach color palette."
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -72,6 +73,30 @@
         "REQ-8"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-generate-an-updated-aesthetic-kyl-logo-that-uses-only-black-and-peach-as-the-primary-colors-and-prominently-features-the-letters-kyl-and-update-the-app-ui-to-use-the-new-logo-asset-in-the-header",
+      "title": "Generate an updated aesthetic KYL logo that uses only black and peach as the primary colors and prominently features the letters “KYL”, and update the app UI to use the new logo asset in the header.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-in-app-simple-non-technical-checklist-english-text-that-explains-how-to-publish-the-kyl-pwa-to-the-google-play-store-and-make-it-accessible-from-within-the-app-ui",
+      "title": "Add an in-app, simple, non-technical checklist (English text) that explains how to publish the KYL PWA to the Google Play Store, and make it accessible from within the app UI.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-play-store-guide-section-from-the-app-ui-so-users-can-no-longer-navigate-to-or-view-any-google-play-store-publishing-checklist-content",
+      "title": "Remove the \"Play Store Guide\" section from the app UI so users can no longer navigate to or view any Google Play Store publishing checklist content.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -108,6 +133,12 @@
     {
       "id": "AR-6",
       "summary": "Add an in-app “Install App” button to prompt PWA installation for KYL",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Generate an aesthetic KYL logo using black and peach colors with the letters \"KYL\"",
       "reqIds": [],
       "status": "pending"
     }

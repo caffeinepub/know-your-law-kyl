@@ -44,9 +44,9 @@ export function AppShell({ children, activeSection, onNavigate }: AppShellProps)
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="/assets/generated/kyl-logo.dim_512x512.png" 
+              src="/assets/generated/kyl-logo-black-peach.dim_512x512.png" 
               alt="Know Your Law Logo" 
-              className="h-10 w-10"
+              className="h-10 w-10 object-contain"
             />
             <div>
               <h1 className="text-xl font-bold tracking-tight">Know Your Law</h1>

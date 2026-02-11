@@ -1,53 +1,43 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T20:41:09.745Z",
+  "generatedAt": "2026-02-11T20:56:22.146Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-7",
-        "summary": "Add an in-app “Install App” button to the KYL UI that prompts users to install the Progressive Web App when installation is available.",
+        "id": "REQ-11",
+        "summary": "Remove the \"Play Store Guide\" section from the app UI so users can no longer navigate to or view any Google Play Store publishing checklist content.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/kyl/InstallAppButton.tsx",
-          "frontend/src/components/kyl/AppShell.tsx"
+          "frontend/src/components/kyl/nav.ts",
+          "frontend/src/components/kyl/TopOverview.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/sections/PlayStoreChecklistSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/kyl/InstallAppButton.tsx",
-          "frontend/src/components/kyl/AppShell.tsx"
-        ]
-      },
-      {
-        "id": "REQ-8",
-        "summary": "Implement client-side installability detection and prompting logic for the PWA, and wire it to the “Install App” button.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/hooks/usePwaInstall.ts",
-          "frontend/src/components/kyl/InstallAppButton.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/hooks/usePwaInstall.ts",
-          "frontend/src/components/kyl/InstallAppButton.tsx"
+          "frontend/src/components/kyl/nav.ts",
+          "frontend/src/components/kyl/TopOverview.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/sections/PlayStoreChecklistSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/App.tsx",
-    "frontend/src/components/kyl/AppShell.tsx",
-    "frontend/src/components/kyl/InstallAppButton.tsx",
-    "frontend/src/hooks/usePwaInstall.ts",
+    "frontend/src/components/kyl/TopOverview.tsx",
+    "frontend/src/components/kyl/nav.ts",
+    "frontend/src/sections/PlayStoreChecklistSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

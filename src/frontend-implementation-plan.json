@@ -1,49 +1,37 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "In-app PWA install button and install-prompt handling (KYL)",
+  "title": "Remove Play Store Guide section from KYL UI",
   "requirements": [
     {
-      "id": "REQ-7",
-      "summary": "Add an in-app “Install App” button in the KYL header that triggers installation when available and provides clear guidance when not.",
+      "id": "REQ-11",
+      "summary": "Remove all UI entry points and rendering for the Play Store Guide so users cannot navigate to or view the Play Store publishing checklist.",
       "acceptanceCriteria": [
-        "A visible button with the label \"Install App\" is added to the app UI (preferably in the header within frontend/src/components/kyl/AppShell.tsx) without breaking existing navigation on mobile or desktop.",
-        "On supported browsers (e.g., Chrome/Edge) where the PWA install prompt is available, clicking \"Install App\" triggers the native installation prompt and does not navigate away from the current page/section.",
-        "If the app is already installed (standalone display mode) or the browser does not expose an install prompt, the \"Install App\" button is hidden or disabled, and the UI provides a clear English explanation on click (e.g., \"Installation is not available in this browser. Use your browser menu and select 'Add to Home Screen' or 'Install'.\").",
-        "The install availability state updates correctly when the browser fires the relevant events (e.g., prompt becomes available, or after the app is installed)."
+        "The sidebar/mobile navigation no longer shows an item labeled \"Play Store Guide\".",
+        "The Overview page no longer shows a \"Play Store Guide\" quick-link card.",
+        "The app no longer defines or navigates to a \"play-store-guide\" section id (no route/switch case that renders the Play Store guide).",
+        "The project builds successfully with no TypeScript errors after removing the section and its references."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/kyl/InstallAppButton.tsx",
-          "operation": "create",
-          "description": "Create a header-ready InstallAppButton component that renders a shadcn-ui Button labeled \"Install App\" and conditionally shows/hides/disabled states based on installability and standalone mode; when install is not available, provide a user-triggered, clear English explanation without navigating away. Verify the component's usage instructions before implementing."
+          "path": "frontend/src/components/kyl/nav.ts",
+          "operation": "modify",
+          "description": "Remove the navigation entry with id \"play-store-guide\" / label \"Play Store Guide\" from navigationSections so it no longer appears in sidebar or mobile navigation."
         },
         {
-          "path": "frontend/src/components/kyl/AppShell.tsx",
+          "path": "frontend/src/components/kyl/TopOverview.tsx",
           "operation": "modify",
-          "description": "Wire InstallAppButton into the existing header layout (keeping current logo/title and mobile menu behavior intact) so the \"Install App\" CTA is accessible on desktop and mobile without breaking navigation. Verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Implement client-side PWA installability detection and deferred prompting logic, and connect it to the Install App UI.",
-      "acceptanceCriteria": [
-        "The app listens for the browser’s install prompt availability event (e.g., beforeinstallprompt) and stores the deferred prompt for later use when the user clicks the button.",
-        "After the user accepts or dismisses the install prompt, the stored prompt is cleared and the button state updates accordingly.",
-        "The app detects when it is running in standalone/app mode (e.g., using display-mode: standalone or navigator.standalone where applicable) and suppresses the install CTA in that case.",
-        "No backend/canister changes are introduced; all logic is implemented purely in the frontend."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/hooks/usePwaInstall.ts",
-          "operation": "create",
-          "description": "Add a dedicated hook that manages PWA install state: listen for install-prompt availability (e.g., beforeinstallprompt), retain/clear a deferred prompt, expose a function to trigger the native prompt on demand, listen for post-install signals (e.g., appinstalled) and display-mode changes, and compute standalone/app-mode to suppress the CTA. Verify the component's usage instructions before implementing."
+          "description": "Remove the \"Play Store Guide\" quick-link card (and its onNavigate('play-store-guide') call) from the Overview quick links grid."
         },
         {
-          "path": "frontend/src/components/kyl/InstallAppButton.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Integrate usePwaInstall to drive button visibility/state and to trigger the stored prompt on click; ensure prompt state clears after accept/dismiss and that standalone mode suppresses the CTA. Verify the component's usage instructions before implementing."
+          "description": "Remove the Play Store guide section from app navigation/rendering: drop PlayStoreChecklistSection import, remove 'play-store-guide' from SectionId, and remove the switch case that renders the Play Store checklist."
+        },
+        {
+          "path": "frontend/src/sections/PlayStoreChecklistSection.tsx",
+          "operation": "delete",
+          "description": "Delete the Play Store publishing checklist UI section to ensure the content is no longer present in the codebase or renderable."
         }
       ]
     }

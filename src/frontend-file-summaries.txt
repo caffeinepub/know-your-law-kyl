@@ -1,6 +1,9 @@
 {
   "frontend/src/hooks/usePwaInstall.ts": "Custom React hook that manages PWA installation state by listening to beforeinstallprompt and appinstalled events, detecting standalone mode, and providing a function to trigger the native install prompt.",
   "frontend/src/components/kyl/InstallAppButton.tsx": "Button component that triggers PWA installation when available, hides itself when app is already installed, and shows helpful instructions via toast when installation prompt is not supported by the browser.",
-  "frontend/src/components/kyl/AppShell.tsx": "Main layout shell component with header (including logo, title, and Install App button), responsive navigation sidebar, main content area, and footer with attribution.",
-  "frontend/src/App.tsx": "Root application component that manages section navigation state and renders the appropriate content section within AppShell, now includes Toaster component for notifications."
+  "frontend/src/components/kyl/AppShell.tsx": "Main layout shell component with header displaying the new black-and-peach KYL logo, responsive navigation sidebar, main content area, and footer with attribution.",
+  "frontend/src/App.tsx": "Main application component managing section navigation state (overview, about-mediation, legislative-knowledge, scenarios), rendering appropriate content within AppShell with Toaster for notifications.",
+  "frontend/src/components/kyl/nav.ts": "Navigation configuration defining all app sections (overview, about mediation, legislative knowledge, scenarios) with their IDs, labels, and emoji icons.",
+  "frontend/src/components/kyl/TopOverview.tsx": "Overview page component displaying hero image, welcome message, and navigation cards to the three main content sections (About Mediation, Legislative Knowledge, Mediation Scenarios).",
+  "frontend/src/sections/PlayStoreChecklistSection.tsx": "Comprehensive, non-technical Google Play Store publishing guide section with step-by-step checklist, helpful resources, and clear instructions for converting the PWA to an Android app."
 }

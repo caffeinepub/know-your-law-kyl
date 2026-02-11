@@ -1,68 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Add in-app “Install App” button for PWA installation",
+  "title": "Remove Play Store Guide section from KYL UI",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-7",
-      "text": "Add an in-app “Install App” button to the KYL UI that prompts users to install the Progressive Web App when installation is available.",
+      "id": "REQ-11",
+      "text": "Remove the \"Play Store Guide\" section from the app UI so users can no longer navigate to or view any Google Play Store publishing checklist content.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-9"
+          "msg-3"
         ],
         "quotes": [
-          "include the install app button"
+          "REMOVE THE \"PLAY STORE GUIDE\" section"
         ]
       },
       "acceptanceCriteria": [
-        "A visible button with the label \"Install App\" is added to the app UI (preferably in the header within frontend/src/components/kyl/AppShell.tsx) without breaking existing navigation on mobile or desktop.",
-        "On supported browsers (e.g., Chrome/Edge) where the PWA install prompt is available, clicking \"Install App\" triggers the native installation prompt and does not navigate away from the current page/section.",
-        "If the app is already installed (standalone display mode) or the browser does not expose an install prompt, the \"Install App\" button is hidden or disabled, and the UI provides a clear English explanation on click (e.g., \"Installation is not available in this browser. Use your browser menu and select 'Add to Home Screen' or 'Install'.\").",
-        "The install availability state updates correctly when the browser fires the relevant events (e.g., prompt becomes available, or after the app is installed)."
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Implement client-side installability detection and prompting logic for the PWA, and wire it to the “Install App” button.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-9"
-        ],
-        "quotes": [
-          "include the install app button"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The app listens for the browser’s install prompt availability event (e.g., beforeinstallprompt) and stores the deferred prompt for later use when the user clicks the button.",
-        "After the user accepts or dismisses the install prompt, the stored prompt is cleared and the button state updates accordingly.",
-        "The app detects when it is running in standalone/app mode (e.g., using display-mode: standalone or navigator.standalone where applicable) and suppresses the install CTA in that case.",
-        "No backend/canister changes are introduced; all logic is implemented purely in the frontend."
+        "The sidebar/mobile navigation no longer shows an item labeled \"Play Store Guide\".",
+        "The Overview page no longer shows a \"Play Store Guide\" quick-link card.",
+        "The app no longer defines or navigates to a \"play-store-guide\" section id (no route/switch case that renders the Play Store guide).",
+        "The project builds successfully with no TypeScript errors after removing the section and its references."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (Shadcn UI components must be composed/consumed, not modified).",
-    "Do not modify immutable hook files listed in SYSTEM_CONTEXT (e.g., frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
-    "Keep the backend as-is (single Motoko actor; no new backend methods required)."
+    "Do not modify any files under frontend/src/components/ui or any paths listed in frontend.immutablePaths.",
+    "Keep the existing PWA install button and installability logic intact; only remove the Play Store Guide content/entry points."
   ],
   "nonGoals": [
-    "Adding or changing PWA manifest/service worker configuration (only add the in-app button and install prompt handling).",
-    "Adding onboarding, authentication changes, analytics, or any new content sections unrelated to installation."
+    "Changing or removing the \"Install App\" button or PWA install flow.",
+    "Adding a replacement help/guide section."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }
