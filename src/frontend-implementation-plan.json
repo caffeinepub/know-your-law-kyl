@@ -1,0 +1,178 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Know Your Law (KYL) — Legal awareness sections, content, theme, and static assets",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create KYL information architecture and responsive navigation across the three top-level sections with internal sub-section navigation.",
+      "acceptanceCriteria": [
+        "App header clearly displays “Know Your Law (KYL)”",
+        "Three top-level sections are visible and navigable",
+        "Navigation works on small screens (no overflow, content readable)",
+        "Each top-level section has a clear internal navigation to its sub-sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Implement the primary app composition with a responsive layout, top-level navigation for (1) About Mediation, (2) Legislative Knowledge, (3) Scenarios, and wiring to render each section view. Use shadcn-ui components (e.g., Tabs/Accordion/Sheet) to support responsive navigation patterns; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/kyl/AppShell.tsx",
+          "operation": "create",
+          "description": "Create a reusable app shell that renders the KYL header, responsive navigation (desktop sidebar vs. mobile drawer), and a content area. Use shadcn-ui components (e.g., Sheet, Button, Separator) to support mobile/desktop navigation; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/kyl/nav.ts",
+          "operation": "create",
+          "description": "Define the single source of truth for the three top-level sections and their sub-sections (labels + ids) used by the navigation UI and content rendering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the About Mediation section with four named sub-sections and structured educational content.",
+      "acceptanceCriteria": [
+        "“About Mediation” shows exactly 4 named sub-sections as requested",
+        "Each sub-section contains structured English content (headings + bullets)",
+        "Content renders consistently (spacing/typography) across sub-sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/AboutMediationSection.tsx",
+          "operation": "create",
+          "description": "Implement the About Mediation section view with exactly four sub-sections: (1) Importance & Benefits of Mediation, (2) Suitability of Mediation for different types of disputes, (3) Role of Mediator, (4) Mediation Process. Structure content with headings and bullet lists for readability, using consistent content blocks. Use shadcn-ui components (e.g., Card, Accordion) to present sub-sections consistently; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/kyl/ContentBlock.tsx",
+          "operation": "create",
+          "description": "Create a reusable content block component for section sub-pages (title, intro text, bullet lists, optional callouts) to ensure consistent typography and spacing. Use shadcn-ui components (e.g., Card) for consistent block styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the About Mediation section view into the top-level navigation and ensure internal navigation to the four sub-sections is available in both desktop and mobile layouts. Use shadcn-ui navigation primitives already selected for the app shell; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement Legislative Knowledge with three acts and a consistent Key Features list for each, including exact Mediation Act, 2023 points.",
+      "acceptanceCriteria": [
+        "“Legislative Knowledge” shows exactly 3 named sub-sections as requested",
+        "“Mediation Act, 2023” displays the provided key features without omission",
+        "“Code of Civil Procedure, 1908” displays a non-empty Key Features list",
+        "“Arbitration and Conciliation Act, 1996” displays a non-empty Key Features list",
+        "Each act’s key features are presented in a consistent visual pattern (same component/layout)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/LegislativeKnowledgeSection.tsx",
+          "operation": "create",
+          "description": "Implement the Legislative Knowledge section view with exactly three sub-sections: Mediation Act, 2023; Code of Civil Procedure, 1908; Arbitration and Conciliation Act, 1996. For each, render a Key Features list in consistent layout, ensuring the Mediation Act, 2023 list includes: pre-litigation mediation; MSA enforceability; Mediation Council of India; confidentiality & 180-day time-bound process; online mediation; applicability. Use shadcn-ui components (e.g., Card, Badge, Accordion) to standardize Key Features presentation; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/kyl/KeyFeaturesCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable Key Features component that accepts a title and a list of features and renders them in a consistent, scannable visual pattern across all three acts. Use shadcn-ui components (e.g., Card) for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Legislative Knowledge section into the top-level navigation and ensure internal navigation to the three act sub-sections works on both mobile and desktop. Use shadcn-ui navigation primitives already selected for the app shell; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement five mediation scenarios, each with a fictional dispute and step-by-step mediation resolution blocks.",
+      "acceptanceCriteria": [
+        "Section contains exactly 5 scenario sub-sections",
+        "Each scenario includes two clearly labeled parts: the fictional dispute and the mediation-based resolution steps",
+        "All 5 scenarios are distinct (different dispute types)",
+        "Resolution steps are actionable and follow a coherent mediation flow"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/ScenariosSection.tsx",
+          "operation": "create",
+          "description": "Implement the Scenarios section view with exactly five scenario sub-sections. For each scenario: clearly name two parties, provide a fictional dispute narrative labeled “Scenario”, and provide a labeled “How mediation resolves it” block with step-by-step mediation flow (ground rules, mediator role, identifying interests, options, settlement terms). Use shadcn-ui components (e.g., Card, Accordion, Separator) to make the two blocks visually distinct and scannable; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/kyl/ScenarioCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable scenario presentation component that enforces the two-block structure (Scenario / How mediation resolves it) and renders steps as a clear ordered list. Use shadcn-ui components (e.g., Card) for consistent structure; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Scenarios section into the top-level navigation and ensure internal navigation to all five scenarios is available and usable on mobile and desktop. Use shadcn-ui navigation primitives already selected for the app shell; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply a cohesive KYL visual theme (non blue-and-purple) with consistent typography, spacing, and scannable content blocks.",
+      "acceptanceCriteria": [
+        "A single, consistent design system is evident across the app (typography scale, spacing, and component styles match)",
+        "Theme does not use a blue-and-purple primary palette",
+        "Key content blocks (e.g., Key Features, Scenario, Steps) are visually scannable (headings, lists, callouts)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define KYL theme tokens and global typography defaults (CSS variables consumed by Tailwind/shadcn-ui), using a palette that avoids blue-and-purple as the primary theme. Ensure consistent spacing/typography for headings, lists, and content blocks (including prose defaults if used)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (if needed) to support the KYL design system (e.g., container spacing, typography plugin defaults) while aligning with the non-blue-and-purple palette defined in frontend/src/index.css."
+        },
+        {
+          "path": "frontend/src/components/kyl/AppShell.tsx",
+          "operation": "modify",
+          "description": "Apply consistent layout styling across header, navigation, and content areas (spacing, borders, backgrounds) using the KYL theme tokens. Use shadcn-ui components for consistent surfaces and interactive states; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add and render required static KYL logo and hero/banner illustration assets from frontend/public/assets/generated.",
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames",
+        "The KYL logo is displayed in the app header (or equivalent top branding area)",
+        "The hero/banner illustration is displayed on the landing/top-level overview area (or equivalent)",
+        "Images are loaded as static assets (not via backend calls)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/kyl-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static KYL logo asset at the exact required path and filename so the UI can render it as a static public asset."
+        },
+        {
+          "path": "frontend/public/assets/generated/kyl-hero.dim_1600x600.png",
+          "operation": "create",
+          "description": "Add the generated static KYL hero/banner illustration asset at the exact required path and filename so the UI can render it as a static public asset."
+        },
+        {
+          "path": "frontend/src/components/kyl/AppShell.tsx",
+          "operation": "modify",
+          "description": "Render the KYL logo from frontend/public/assets/generated/kyl-logo.dim_512x512.png in the header branding area (with accessible alt text)."
+        },
+        {
+          "path": "frontend/src/components/kyl/TopOverview.tsx",
+          "operation": "create",
+          "description": "Create a top-level overview/landing content block that displays the hero/banner image from frontend/public/assets/generated/kyl-hero.dim_1600x600.png and provides brief educational intro plus quick links to the three top-level sections. Use shadcn-ui components (e.g., Card, Button) for consistent callouts; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the TopOverview block into the app’s primary view so the hero/banner illustration is visible in the top-level overview area without adding new required routes. Use shadcn-ui components already selected for layout where appropriate; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-the-app-s-core-information-architecture-and-navigation-for-a-legal-awareness-app-titled-know-your-law-kyl-with-three-top-level-sections-1-about-mediation-2-legislative-knowledge-3-scenarios-where-mediation-will-take-place-the-ui-must-allow-users-to-easily-navigate-between-top-level-sections-and-their-sub-sections-e-g-via-sidebar-tabs-or-accordion-and-must-be-usable-on-mobile-and-desktop",
+      "featureTitle": "Create the app’s core information architecture and navigation for a legal awareness app titled “Know Your Law (KYL)”, with three top-level sections: (1) About Mediation, (2) Legislative Knowledge, (3) Scenarios where mediation will take place. The UI must allow users to easily navigate between top-level sections and their sub-sections (e.g., via sidebar, tabs, or accordion), and must be usable on mobile and desktop.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/AppShell.tsx",
+        "frontend/src/components/kyl/nav.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-about-mediation-section-with-four-sub-sections-and-english-educational-content-for-each-1-importance-benefits-of-mediation-2-suitability-of-mediation-for-different-types-of-disputes-3-role-of-mediator-4-mediation-process-content-must-be-structured-with-headings-and-bullet-points-for-readability",
+      "featureTitle": "Implement the “About Mediation” section with four sub-sections and English educational content for each: (1) Importance & Benefits of Mediation, (2) Suitability of Mediation for different types of disputes, (3) Role of Mediator, (4) Mediation Process. Content must be structured with headings and bullet points for readability.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/ContentBlock.tsx",
+        "frontend/src/sections/AboutMediationSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-legislative-knowledge-section-with-three-sub-sections-1-mediation-act-2023-2-code-of-civil-procedure-1908-3-arbitration-and-conciliation-act-1996-for-each-sub-section-display-a-key-features-list-the-mediation-act-2023-key-features-must-include-the-exact-points-provided-by-the-user-pre-litigation-mediation-msa-enforceability-mediation-council-of-india-confidentiality-180-day-time-bound-process-online-mediation-applicability-also-author-similar-key-features-lists-for-the-code-of-civil-procedure-1908-and-the-arbitration-and-conciliation-act-1996-in-clear-plain-english-no-placeholders",
+      "featureTitle": "Implement the “Legislative Knowledge” section with three sub-sections: (1) Mediation Act, 2023, (2) Code of Civil Procedure, 1908, (3) Arbitration and Conciliation Act, 1996. For each sub-section, display a “Key Features” list. The “Mediation Act, 2023” key features must include the exact points provided by the user (pre-litigation mediation, MSA enforceability, Mediation Council of India, confidentiality & 180-day time-bound process, online mediation, applicability). Also author similar “Key Features” lists for the Code of Civil Procedure, 1908 and the Arbitration and Conciliation Act, 1996 in clear, plain English (no placeholders).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/KeyFeaturesCard.tsx",
+        "frontend/src/sections/LegislativeKnowledgeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-scenarios-where-mediation-will-take-place-section-with-exactly-5-sub-sections-each-sub-section-must-include-a-a-fictional-dispute-scenario-between-two-parties-clearly-naming-the-parties-and-b-a-step-by-step-mediation-based-resolution-approach-explaining-how-the-dispute-could-be-resolved-through-mediation-ground-rules-mediator-role-identifying-interests-options-settlement-terms-content-must-be-in-english-and-clearly-separated-into-scenario-and-how-mediation-resolves-it-blocks",
+      "featureTitle": "Implement the “Scenarios where mediation will take place” section with exactly 5 sub-sections. Each sub-section must include: (a) a fictional dispute scenario between two parties (clearly naming the parties), and (b) a step-by-step mediation-based resolution approach explaining how the dispute could be resolved through mediation (ground rules, mediator role, identifying interests, options, settlement terms). Content must be in English and clearly separated into “Scenario” and “How mediation resolves it” blocks.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/ScenarioCard.tsx",
+        "frontend/src/sections/ScenariosSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-creative-visual-theme-for-the-kyl-app-colors-typography-spacing-and-components-appropriate-for-a-legal-awareness-education-product-avoid-using-a-blue-and-purple-theme-ensure-consistent-styling-across-navigation-section-pages-and-content-blocks-cards-accordions-callouts-lists",
+      "featureTitle": "Apply a cohesive, creative visual theme for the KYL app (colors, typography, spacing, and components) appropriate for a legal awareness/education product. Avoid using a blue-and-purple theme. Ensure consistent styling across navigation, section pages, and content blocks (cards, accordions, callouts, lists).",
+      "files": [
+        "frontend/src/components/kyl/AppShell.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-static-images-to-the-app-by-generating-the-assets-into-frontend-public-assets-generated-and-rendering-them-in-the-ui-a-kyl-logo-and-a-simple-hero-banner-illustration-consistent-with-the-chosen-theme",
+      "featureTitle": "Add required static images to the app by generating the assets into frontend/public/assets/generated and rendering them in the UI: a KYL logo and a simple hero/banner illustration consistent with the chosen theme.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/kyl/AppShell.tsx",
+        "frontend/src/components/kyl/TopOverview.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

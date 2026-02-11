@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Legal awareness app \"Know Your Law\" (KYL) focused on mediation education, legislative summaries, and mediation scenario walkthroughs.",
+  "architectural_notes": [
+    "Content organized into three top-level sections with nested sub-sections/sub-sub-sections; legislative pages include a \"Key Features\" list; scenarios include narrative + recommended mediation steps."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal KYL wordmark logo with balanced typography (kyl-logo.dim_512x512.png)\n- Simple legal-education themed banner illustration featuring mediation/handshake motif in a clean, modern style (kyl-hero.dim_1600x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-the-app-s-core-information-architecture-and-navigation-for-a-legal-awareness-app-titled-know-your-law-kyl-with-three-top-level-sections-1-about-mediation-2-legislative-knowledge-3-scenarios-where-mediation-will-take-place-the-ui-must-allow-users-to-easily-navigate-between-top-level-sections-and-their-sub-sections-e-g-via-sidebar-tabs-or-accordion-and-must-be-usable-on-mobile-and-desktop",
+      "title": "Create the app’s core information architecture and navigation for a legal awareness app titled “Know Your Law (KYL)”, with three top-level sections: (1) About Mediation, (2) Legislative Knowledge, (3) Scenarios where mediation will take place. The UI must allow users to easily navigate between top-level sections and their sub-sections (e.g., via sidebar, tabs, or accordion), and must be usable on mobile and desktop.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-mediation-section-with-four-sub-sections-and-english-educational-content-for-each-1-importance-benefits-of-mediation-2-suitability-of-mediation-for-different-types-of-disputes-3-role-of-mediator-4-mediation-process-content-must-be-structured-with-headings-and-bullet-points-for-readability",
+      "title": "Implement the “About Mediation” section with four sub-sections and English educational content for each: (1) Importance & Benefits of Mediation, (2) Suitability of Mediation for different types of disputes, (3) Role of Mediator, (4) Mediation Process. Content must be structured with headings and bullet points for readability.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-legislative-knowledge-section-with-three-sub-sections-1-mediation-act-2023-2-code-of-civil-procedure-1908-3-arbitration-and-conciliation-act-1996-for-each-sub-section-display-a-key-features-list-the-mediation-act-2023-key-features-must-include-the-exact-points-provided-by-the-user-pre-litigation-mediation-msa-enforceability-mediation-council-of-india-confidentiality-180-day-time-bound-process-online-mediation-applicability-also-author-similar-key-features-lists-for-the-code-of-civil-procedure-1908-and-the-arbitration-and-conciliation-act-1996-in-clear-plain-english-no-placeholders",
+      "title": "Implement the “Legislative Knowledge” section with three sub-sections: (1) Mediation Act, 2023, (2) Code of Civil Procedure, 1908, (3) Arbitration and Conciliation Act, 1996. For each sub-section, display a “Key Features” list. The “Mediation Act, 2023” key features must include the exact points provided by the user (pre-litigation mediation, MSA enforceability, Mediation Council of India, confidentiality & 180-day time-bound process, online mediation, applicability). Also author similar “Key Features” lists for the Code of Civil Procedure, 1908 and the Arbitration and Conciliation Act, 1996 in clear, plain English (no placeholders).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-scenarios-where-mediation-will-take-place-section-with-exactly-5-sub-sections-each-sub-section-must-include-a-a-fictional-dispute-scenario-between-two-parties-clearly-naming-the-parties-and-b-a-step-by-step-mediation-based-resolution-approach-explaining-how-the-dispute-could-be-resolved-through-mediation-ground-rules-mediator-role-identifying-interests-options-settlement-terms-content-must-be-in-english-and-clearly-separated-into-scenario-and-how-mediation-resolves-it-blocks",
+      "title": "Implement the “Scenarios where mediation will take place” section with exactly 5 sub-sections. Each sub-section must include: (a) a fictional dispute scenario between two parties (clearly naming the parties), and (b) a step-by-step mediation-based resolution approach explaining how the dispute could be resolved through mediation (ground rules, mediator role, identifying interests, options, settlement terms). Content must be in English and clearly separated into “Scenario” and “How mediation resolves it” blocks.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-creative-visual-theme-for-the-kyl-app-colors-typography-spacing-and-components-appropriate-for-a-legal-awareness-education-product-avoid-using-a-blue-and-purple-theme-ensure-consistent-styling-across-navigation-section-pages-and-content-blocks-cards-accordions-callouts-lists",
+      "title": "Apply a cohesive, creative visual theme for the KYL app (colors, typography, spacing, and components) appropriate for a legal awareness/education product. Avoid using a blue-and-purple theme. Ensure consistent styling across navigation, section pages, and content blocks (cards, accordions, callouts, lists).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-static-images-to-the-app-by-generating-the-assets-into-frontend-public-assets-generated-and-rendering-them-in-the-ui-a-kyl-logo-and-a-simple-hero-banner-illustration-consistent-with-the-chosen-theme",
+      "title": "Add required static images to the app by generating the assets into frontend/public/assets/generated and rendering them in the UI: a KYL logo and a simple hero/banner illustration consistent with the chosen theme.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create app titled \"Know Your Law\" (KYL) for legal awareness",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add section \"About Mediation\" with subsections: Importance & Benefits, Suitability for disputes, Role of Mediator, Mediation Process",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add section \"Legislative Knowledge\" with subsections: Mediation Act 2023, Code of Civil Procedure 1908, Arbitration and Conciliation Act 1996, each with key features",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "For \"Mediation Act, 2023\" include provided key features (pre-litigation mediation, MSA enforceability, Mediation Council, confidentiality & time-bound 180 days, online mediation, applicability)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create section \"Scenarios where mediation will take place\" with 5 fictional dispute scenarios and mediation-based resolution guidance",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Know Your Law (KYL)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

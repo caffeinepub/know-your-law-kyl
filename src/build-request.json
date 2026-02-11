@@ -1,0 +1,151 @@
+{
+  "kind": "build_request",
+  "title": "Know Your Law (KYL) legal awareness app with mediation education, legislative key features, and scenarios",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create the app’s core information architecture and navigation for a legal awareness app titled “Know Your Law (KYL)”, with three top-level sections: (1) About Mediation, (2) Legislative Knowledge, (3) Scenarios where mediation will take place. The UI must allow users to easily navigate between top-level sections and their sub-sections (e.g., via sidebar, tabs, or accordion), and must be usable on mobile and desktop.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create an app for legal awareness titled \"Know Your Law\" KYL. Now within this app, I want three sub-sections."
+        ]
+      },
+      "acceptanceCriteria": [
+        "App header clearly displays “Know Your Law (KYL)”",
+        "Three top-level sections are visible and navigable",
+        "Navigation works on small screens (no overflow, content readable)",
+        "Each top-level section has a clear internal navigation to its sub-sections"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the “About Mediation” section with four sub-sections and English educational content for each: (1) Importance & Benefits of Mediation, (2) Suitability of Mediation for different types of disputes, (3) Role of Mediator, (4) Mediation Process. Content must be structured with headings and bullet points for readability.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "The first one is \"About Mediation\" - now within this there would be 4 sub sub-sections"
+        ]
+      },
+      "acceptanceCriteria": [
+        "“About Mediation” shows exactly 4 named sub-sections as requested",
+        "Each sub-section contains structured English content (headings + bullets)",
+        "Content renders consistently (spacing/typography) across sub-sections"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the “Legislative Knowledge” section with three sub-sections: (1) Mediation Act, 2023, (2) Code of Civil Procedure, 1908, (3) Arbitration and Conciliation Act, 1996. For each sub-section, display a “Key Features” list. The “Mediation Act, 2023” key features must include the exact points provided by the user (pre-litigation mediation, MSA enforceability, Mediation Council of India, confidentiality & 180-day time-bound process, online mediation, applicability). Also author similar “Key Features” lists for the Code of Civil Procedure, 1908 and the Arbitration and Conciliation Act, 1996 in clear, plain English (no placeholders).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Then second one is \"Legislative Knowledge\". Now within this, I want you to give three sub sub-sections: 1. Mediation Act, 2023 2. Code of Civil Procedure, 1908 3. Arbitration and Conciliation Act, 1996",
+          "NOW WITHIN MEDIATION ACT, I WANT YOU TO GIVE THESE KEY FEATURES: ... SIMILARLY, GIVE KEY FEATURES FOR THE 2nd and 3rd SUB SUB-SECTIONS."
+        ]
+      },
+      "acceptanceCriteria": [
+        "“Legislative Knowledge” shows exactly 3 named sub-sections as requested",
+        "“Mediation Act, 2023” displays the provided key features without omission",
+        "“Code of Civil Procedure, 1908” displays a non-empty Key Features list",
+        "“Arbitration and Conciliation Act, 1996” displays a non-empty Key Features list",
+        "Each act’s key features are presented in a consistent visual pattern (same component/layout)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the “Scenarios where mediation will take place” section with exactly 5 sub-sections. Each sub-section must include: (a) a fictional dispute scenario between two parties (clearly naming the parties), and (b) a step-by-step mediation-based resolution approach explaining how the dispute could be resolved through mediation (ground rules, mediator role, identifying interests, options, settlement terms). Content must be in English and clearly separated into “Scenario” and “How mediation resolves it” blocks.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "NOW THE THIRD ONE WOULD BE - Scenarios where mediation will take place (here, give 5 sub sub-sections - wherein you give a fictional scenario of dispute between two parties and then you give a solution on how to go about resolving it using mediation."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section contains exactly 5 scenario sub-sections",
+        "Each scenario includes two clearly labeled parts: the fictional dispute and the mediation-based resolution steps",
+        "All 5 scenarios are distinct (different dispute types)",
+        "Resolution steps are actionable and follow a coherent mediation flow"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a cohesive, creative visual theme for the KYL app (colors, typography, spacing, and components) appropriate for a legal awareness/education product. Avoid using a blue-and-purple theme. Ensure consistent styling across navigation, section pages, and content blocks (cards, accordions, callouts, lists).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create an app for legal awareness titled \"Know Your Law\" KYL."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single, consistent design system is evident across the app (typography scale, spacing, and component styles match)",
+        "Theme does not use a blue-and-purple primary palette",
+        "Key content blocks (e.g., Key Features, Scenario, Steps) are visually scannable (headings, lists, callouts)"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add required static images to the app by generating the assets into frontend/public/assets/generated and rendering them in the UI: a KYL logo and a simple hero/banner illustration consistent with the chosen theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create an app for legal awareness titled \"Know Your Law\" KYL."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames",
+        "The KYL logo is displayed in the app header (or equivalent top branding area)",
+        "The hero/banner illustration is displayed on the landing/top-level overview area (or equivalent)",
+        "Images are loaded as static assets (not via backend calls)"
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must not modify files under frontend/src/components/ui (compose them instead).",
+    "Frontend must not modify any paths listed as immutable by the platform (e.g., Internet Identity/actor hooks and main entry points).",
+    "Keep the backend as a single Motoko actor; do not introduce multiple backend services."
+  ],
+  "nonGoals": [
+    "Do not provide personalized legal advice, jurisdiction-specific counsel, or attorney-client guidance; content is educational and general.",
+    "No third-party authentication providers; do not add social logins.",
+    "No real-time chat or websocket-based features.",
+    "No external databases or non-Internet-Computer backend services."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal KYL wordmark logo with balanced typography (kyl-logo.dim_512x512.png)",
+      "Simple legal-education themed banner illustration featuring mediation/handshake motif in a clean, modern style (kyl-hero.dim_1600x600.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English for user-facing text"
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
